@@ -1,0 +1,37 @@
+<h1>New Student</h1>
+
+<%= form_with model: @student do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :surname %><br>
+    <%= form.text_field :surname %>
+  </div>
+
+  <div>
+    <%= form.label :patronymic %><br>
+    <%= form.text_field :patronymic %>
+  </div>
+
+  <div>
+    <%= form.label :sex %><br>
+    <%= form.select :sex, ['M', 'F']%>
+  </div>
+
+  <div>
+    <%= form.label :age %><br>
+    <%= form.number_field :age, in: 5..150, step: 1 %>
+  </div>
+
+  <div>
+    <%= form.label :course %><br>
+    <%= form.number_field :course, in: 1..6, step: 1 %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
