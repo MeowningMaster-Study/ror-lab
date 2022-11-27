@@ -1,13 +1,14 @@
 <h1><%= @student.name %> <%= @student.surname %></h1>
 
-<p>Patronymic: <%= @student.patronymic %></p>
-<p>Sex: <%= @student.sex %></p>
-<p>Age: <%= @student.age %></p>
-<p>Course: <%= @student.course %></p>
+<p>По батькові: <%= @student.patronymic %></p>
+<p>Стать: <%= @student.sex %></p>
+<p>Вік: <%= @student.age %></p>
+<p>Курс: <%= @student.course %></p>
 
+<p>Дії</p>
 <ul>
-  <li><%= link_to "Edit", edit_student_path(@student) %></li>
-  <li><%= link_to "Destroy", student_path(@student), data: {
+  <li><%= link_to "Редагувати", edit_student_path(@student) %></li>
+  <li><%= link_to "Видалити", student_path(@student), data: {
                     turbo_method: :delete,
                     turbo_confirm: "Are you sure?"
                   } %></li>
